@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import Comment
 from django.utils import timezone
 
-class CommentSerializer(serializers.Serializer):
+class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
