@@ -1,0 +1,15 @@
+from rest_framework import serializers
+from .models import Comment
+from django.utils import timezone
+
+class CommentSerializer(serializers.Serializer):
+
+    class Meta:
+        model = Comment
+        fields = ["id", "author", "text", "date", "likes", "image"]
+        read_only_fields = ["id"]
+
+    def create(self, validated_data):
+        validated_data["author"] = "Admin"
+        validated_data["date"] = timezone.now()
+        return super().create(validated_data)
