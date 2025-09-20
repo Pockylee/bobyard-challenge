@@ -33,7 +33,7 @@ Email: brianpoyili@gmail.com
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Pockylee/bobyard-challenge.git
 cd bobyard-challenge
 ```
 
@@ -55,9 +55,6 @@ pip install -r requirements.txt
 ```bash
 # Run migrations
 python manage.py migrate
-
-# Create superuser (optional, for admin access)
-python manage.py createsuperuser
 
 # Load initial comment data
 python manage.py seed_comments
